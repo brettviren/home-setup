@@ -1,0 +1,11 @@
+---
+- name: Install dev packages
+  apt: pkg={{ item }} state=latest
+  with_items: 
+    - emacs24
+    - git
+    - gitk
+    - make
+    - cmake
+    - gnutls-bin
+    - build-essential

@@ -8,4 +8,10 @@
   when: ansible_distribution == 'Ubuntu' and ansible_distribution_release == 'trusty' 
 
 - name: Install MATE Desktop
-  apt: name="mate-desktop-environment-extras"
+  apt: pkg={{ item }} state=latest
+  with_items: 
+    - mate-desktop-environment-extras
+    - language-pack-en 
+    - language-pack-gnome-en
+    - dconf-editor
+    

@@ -7,6 +7,12 @@ harm.home
 haiku.home
 hal.home
 
+[dev-boxes]
+harm.home
+haiku.home
+hal.home
+
+
 # [desktops]
 # haiku.home
 

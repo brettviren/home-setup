@@ -1,0 +1,6 @@
+---
+- hosts: dev-boxes
+  remote_user: root
+  roles: 
+    - { role: dev-box }
+

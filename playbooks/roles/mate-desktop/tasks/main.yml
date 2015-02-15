@@ -1,0 +1,11 @@
+---
+- name: Ubuntu MATE dev base PPA
+  apt_repository: repo='ppa:ubuntu-mate-dev/ppa' state=present update_cache=yes
+  when: ansible_distribution == 'Ubuntu' and ansible_distribution_release == 'trusty'
+
+- name: Ubuntu MATE dev trusty PPA
+  apt_repository: repo='ppa:ubuntu-mate-dev/trusty-mate' state=present update_cache=yes
+  when: ansible_distribution == 'Ubuntu' and ansible_distribution_release == 'trusty' 
+
+- name: Install MATE Desktop
+  apt: name="mate-desktop-environment-extras"

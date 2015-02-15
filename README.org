@@ -1,10 +1,34 @@
 #+TITLE: Home setup
 
-* Control area
+* Install
 
-This repo provides the Ansible-based control area for setting up my home machines.
+Install Ansible:
 
 #+BEGIN_EXAMPLE
-  $ cd home-setup
-  $ git submodule add https://github.com/ansible/ansible.git
+  $ virtualenv venv
+  $ source venv/bin/activate
+  $ pip install ansible
 #+END_EXAMPLE
+
+Then,
+
+#+BEGIN_EXAMPLE
+  $ cd /path/to/home-setup
+  $ export ANSIBLE_HOSTS=`pwd`/hosts
+  $ ansible all -m ping
+#+END_EXAMPLE
+
+* Ansible notes
+
+** Layout
+
+Under =roles/XXX/=:
+
+- =tasks/main.yml= :: tasks added automatically
+- =handlers/main.yml= :: handlers ditto 
+- =vars/main.yml= :: variables ditto
+- =meta/main.yml= :: express role dependencies
+- =defaults/main.yml= :: define default variables
+- =files/= :: root for =copy= or =script= task paths 
+- =templates/= :: template task files
+- =tasks/= :: include task root path

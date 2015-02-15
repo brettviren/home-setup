@@ -1,0 +1,5 @@
+---
+- hosts: mate-desktops
+  remote_user: root
+  roles: 
+    - { role: mate-desktop }

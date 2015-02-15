@@ -1,0 +1,19 @@
+[laptops]
+harm.home
+#hal.home
+
+[mate-desktops]
+harm.home
+haiku.home
+hal.home
+
+# [desktops]
+# haiku.home
+
+# [bv]
+# harm.home
+# hal.home
+# haiku.home
+
+# plex media
+# arm audio

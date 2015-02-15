@@ -1,0 +1,7 @@
+#+TITLE: Home setup
+
+* Control area
+
+This repo provides the Ansible-based control area for setting up my home machines.
+
+

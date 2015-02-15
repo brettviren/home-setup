@@ -4,4 +4,7 @@
 
 This repo provides the Ansible-based control area for setting up my home machines.
 
-
+#+BEGIN_EXAMPLE
+  $ cd home-setup
+  $ git submodule add https://github.com/ansible/ansible.git
+#+END_EXAMPLE

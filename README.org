@@ -20,6 +20,13 @@ Then,
 
 * Ansible notes
 
+** Variables
+
+#+BEGIN_EXAMPLE
+  $ ansible -m setup <hostname>
+  $ ansible -m setup all
+#+END_EXAMPLE
+
 ** Layout
 
 Under =roles/XXX/=:

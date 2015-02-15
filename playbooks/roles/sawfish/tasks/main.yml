@@ -1,0 +1,31 @@
+---
+
+- name: Sawfish WM apt repository
+  apt_repository: repo='deb http://apt.nanolx.org/ photonic main' 
+                  state=present update_cache=yes
+  when: ansible_machine != "armv7l"
+
+- name: Install Sawfish WM (non-ARM)
+  apt: pkg={{ item }} state=installed
+  with_items: 
+    - rep
+    - rep-gtk
+    - sawfish
+    - sawfish-data
+    - sawfish-lisp-source
+  when: ansible_machine != "armv7l"
+
+
+## install from debs for arm.
+# fixme: make this idempotent while also removing deb files
+
+- name: Copy Sawfish WM deb files (ARM)
+  copy: src={{ item }} dest="./"
+  with_items: ansible_debs
+  when: ansible_machine == "armv7l"
+
+- name: Install Sawfish WM (ARM)
+  apt: deb="./{{ item }}" 
+  with_items: ansible_debs
+  when: ansible_machine == "armv7l"
+

@@ -1,0 +1,9 @@
+---
+ansible_debs:
+  - librep16_0.92.4-1nano_armhf.deb
+  - rep_0.92.4-1nano_armhf.deb
+  - rep-gtk_0.90.8.2-1nano_armhf.deb
+  - sawfish_1.10.99-1nano_armhf.deb
+  - sawfish-data_1.10.99-1nano_all.deb
+  - sawfish-lisp-source_1.10.99-1nano_all.deb
+  - sawfish-mate-session_1.10.99-1nano_all.deb
